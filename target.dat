@@ -9,7 +9,6 @@ image.sql.gz
 geo_tags.sql.gz
 category.sql.gz
 categorylinks.sql.gz
-user_groups.sql.gz
 imagelinks.sql.gz
 redirect.sql.gz
 sites.sql.gz
