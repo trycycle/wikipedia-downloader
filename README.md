@@ -1,10 +1,11 @@
 # wikipedia-downloader
-A Python script for downloading Wikipedia data dump files
+Python scripts for downloading Wikipedia data dump files. You can download Wikipedia dump files listed in ```target.dat``` using ```download.py```.
 
 # Requirements
 * Python 3.X
-* requests
-* tqdm
+* Python libraries
+    * requests
+    * tqdm
 
 # How to use
 ```
