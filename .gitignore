@@ -104,4 +104,4 @@ ENV/
 ja/*
 en/*
 .DS_Store
-download.py
+batch.py
