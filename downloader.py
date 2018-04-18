@@ -24,7 +24,7 @@ class WikipediaDownloader(object):
         save_dir = os.path.join(self.data_dir, lang, now)
         os.makedirs(save_dir)
 
-        with open("list.dat") as f:
+        with open("target.dat") as f:
             for line in f:
                 _filename = line.strip()
                 filename = "{0}wiki-latest-{1}".format(lang, _filename)
