@@ -21,7 +21,7 @@ class WikipediaDownloader(object):
 
     def download_latest_wikipedia_dump(self, lang="ja"):
         now = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-        save_dir = "{0}/{1}/{2}".format(self.data_dir, lang, now)
+        save_dir = os.path.join(self.data_dir, lang, now)
         os.makedirs(save_dir)
 
         with open("list.dat") as f:
