@@ -99,3 +99,9 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# misc
+ja/*
+en/*
+.DS_Store
+download.py
