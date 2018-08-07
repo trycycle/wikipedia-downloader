@@ -125,6 +125,7 @@ class WikipediaContentImporter(object):
                     self.__insert_text_record(rev_id, text)
 
                     if itercount >= extract_count:
+                        progress_bar.update(1)
                         break
                     else:
                         itercount += 1
