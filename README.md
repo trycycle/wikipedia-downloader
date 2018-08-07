@@ -26,7 +26,7 @@ Options:
   --help                          Show this message and exit.
   ```
 
-## Parse a XML articile dump file and import it into MySQL
+## Parse a XML article dump file and import it into MySQL
 You can download a table structure file from [here](https://github.com/wikimedia/mediawiki/blob/master/maintenance/tables.sql).
 
 ```
