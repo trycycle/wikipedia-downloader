@@ -1,4 +1,4 @@
-# wikipedia-downloader
+# Wikipedia downloader & importer
 Python scripts for downloading Wikipedia data dump files. You can download Wikipedia dump files listed in ```target.dat``` using ```manipulate.py```.
 
 Also, you can parse a XML article dump file (that is, ```pages-articles.xml```) and import it into your MySQL database, using ```manipulate.py```.
@@ -7,6 +7,7 @@ Also, you can parse a XML article dump file (that is, ```pages-articles.xml```) 
 * Python 3.X
 * Python libraries
     * requests
+    * mysqlclient
     * click
     * tqdm
 
@@ -26,6 +27,8 @@ Options:
   ```
 
 ## Parse a XML articile dump file and import it into MySQL
+You can download a table structure file from [here](https://github.com/wikimedia/mediawiki/blob/master/maintenance/tables.sql).
+
 ```
 Usage: manipulate.py import_page_article_xml [OPTIONS] FILE_PATH
 
