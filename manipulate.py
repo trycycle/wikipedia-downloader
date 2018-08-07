@@ -31,7 +31,7 @@ def download(lang, data_dir):
 
 @cmd.command()
 @click.argument('file_path')
-@click.option('--extract_count', type=int, default=float("inf"), help="number of articles of which XML content will be imported. If not specified, all articiles will be imported.")
+@click.option('--extract_count', type=int, default=None, help="number of articles of which XML content will be imported. If not specified, all articiles will be imported.")
 @click.option('--db_host', default="localhost", help="MySQL host name (default: localhost).")
 @click.option('--db_port', default=3306, help="MySQL port number (default: 3306).")
 @click.option('--db_name', default="ja_wikipedia", help="MySQL database name. Dafault value is ja_wikipedia.")

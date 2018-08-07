@@ -10,6 +10,7 @@
 """
 import MySQLdb
 import xml.etree.ElementTree as ET
+from tqdm import tqdm
 
 NAMESPACE = "{http://www.mediawiki.org/xml/export-0.10/}"
 
@@ -92,17 +93,23 @@ class WikipediaContentImporter(object):
         return xml_element.find("./{}title".format(NAMESPACE)).text
 
 
-    def import_page_article_xml_serially(self, file_path, extract_count=float("inf"), init_table=True):
+    def import_page_article_xml_serially(self, file_path, extract_count=None, init_table=True):
         self.__open_mysql_connection()
 
         if init_table:
             # revisionテーブル, textテーブルを初期化する
             self.__init_tables()
 
+        if not extract_count:
+            sql = "SELECT COUNT(*) FROM {db}.page".format(db=self.db)
+            self.cursor.execute(sql)
+            extract_count = self.cursor.fetchone()[0]
+
         context = ET.iterparse(file_path, events=('start', 'end'))
         context = iter(context)
         _, root = next(context)
 
+        progress_bar = tqdm(total=extract_count)
         itercount = 1
         for event, elem in context:
             if event == "end" and elem.tag == "{}page".format(NAMESPACE):
@@ -121,12 +128,16 @@ class WikipediaContentImporter(object):
                         break
                     else:
                         itercount += 1
+                        progress_bar.update(1)
 
             # Free memory
             root.clear()
 
         # Close MySQL database connection
         self.__close_mysql_connection()
+
+        # Close progress bar
+        progress_bar.close()
 
 
 
