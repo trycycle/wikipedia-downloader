@@ -103,6 +103,5 @@ ENV/
 # misc
 .DS_Store
 data/*
-misc/*
 sql/create_view.sql
 sql/drop_table.sql
