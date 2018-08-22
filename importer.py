@@ -139,10 +139,3 @@ class WikipediaContentImporter(object):
 
         # Close progress bar
         progress_bar.close()
-
-
-
-if __name__ == '__main__':
-    import fire
-    #fire.Fire(WikipediaContentImporter)
-    #python importer.py --db='ja_wikipedia' "data/ja_wikipedia.xml" --user='ja_wikipedia' --passwd='ja_wikipedia' import_article_xml_serially --file_path="data/ja_wikipedia.xml" --init_table=True
