@@ -101,7 +101,8 @@ ENV/
 .mypy_cache/
 
 # misc
-ja/*
-en/*
 .DS_Store
-batch.py
+data/*
+misc/*
+sql/create_view.sql
+sql/drop_table.sql
