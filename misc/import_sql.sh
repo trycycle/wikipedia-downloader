@@ -1,0 +1,13 @@
+mysql -u root --password="" ja_wikipedia < sql/jawiki-latest-category.sql
+mysql -u root --password="" ja_wikipedia < sql/jawiki-latest-redirect.sql
+mysql -u root --password="" ja_wikipedia < sql/jawiki-latest-page.sql
+mysql -u root --password="" ja_wikipedia < sql/jawiki-latest-geo_tags.sql
+mysql -u root --password="" ja_wikipedia < sql/jawiki-latest-site_stats.sql
+mysql -u root --password="" ja_wikipedia < sql/jawiki-latest-sites.sql
+mysql -u root --password="" ja_wikipedia < sql/jawiki-latest-image.sql
+mysql -u root --password="" ja_wikipedia < sql/jawiki-latest-categorylinks.sql
+mysql -u root --password="" ja_wikipedia < sql/jawiki-latest-externallinks.sql
+mysql -u root --password="" ja_wikipedia < sql/jawiki-latest-imagelinks.sql
+mysql -u root --password="" ja_wikipedia < sql/jawiki-latest-langlinks.sql
+mysql -u root --password="" ja_wikipedia < sql/jawiki-latest-pagelinks.sql
+mysql -u root --password="" ja_wikipedia < sql/jawiki-latest-templatelinks.sql
