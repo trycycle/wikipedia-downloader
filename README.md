@@ -37,10 +37,10 @@ Modify and run `import_sql.sh` in the `misc` directory.
 
 ## Parse a XML article dump file and import it into MySQL
 1. Before running a script, download a table structure file from [here](https://github.com/wikimedia/mediawiki/blob/master/maintenance/tables.sql). Then, create tables on your MySQL database.
-2. Run `manipulate.py` by following the below description. For example, image that you want to import a XML article dump file (data_dir/pages-articles.xml) into your MySQL database (hostname:localhost, port:3306, user:ja_wikipedia, password:ja_wikipedia, charset: utf8). Then, run the command `python manipulate.py import_page_article_xml_serially --db_host localhost --db_port 3306 --db_user ja_wikipedia --db_password ja_wikipedia --db_charset utf8 data_dir/pages-articles.xml`.
+2. Run `manipulate.py` by following the below description. For example, image that you want to import a XML article dump file (data_dir/pages-articles.xml) into your MySQL database (hostname:localhost, port:3306, user:ja_wikipedia, password:ja_wikipedia, charset: utf8). Then, run the command `python manipulate.py import_page_article_xml --db_host localhost --db_port 3306 --db_user ja_wikipedia --db_password ja_wikipedia --db_charset utf8 data_dir/pages-articles.xml`.
 
 ```
-Usage: manipulate.py import_page_article_xml_serially [OPTIONS] FILE_PATH
+Usage: manipulate.py import_page_article_xml [OPTIONS] FILE_PATH
 
   This script parses a page article XML file on FILE_PATH and import it into
   a MySQL database.
